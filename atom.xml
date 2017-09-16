@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[JavaSE]]></title>
+  <link href="hobson.top/atom.xml" rel="self"/>
+  <link href="hobson.top/"/>
+  <updated>2017-09-16T20:56:57+08:00</updated>
+  <id>hobson.top/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[01 - 基础知识]]></title>
+    <link href="hobson.top/15054541063906.html"/>
+    <updated>2017-09-15T13:41:46+08:00</updated>
+    <id>hobson.top/15054541063906.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">Java概述</a>
+<ul>
+<li>
+<a href="#toc_1">Java历史背景</a>
+</li>
+<li>
+<a href="#toc_2">Java的三大平台:</a>
+</li>
+<li>
+<a href="#toc_3">Java语言特性</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">Java开发环境配置</a>
+<ul>
+<li>
+<a href="#toc_5">JDK提供开发环境支持</a>
+</li>
+<li>
+<a href="#toc_6">环境变量的配置</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">Java编译运行机制</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">Java概述</h2>
+
+<h3 id="toc_1">Java历史背景</h3>
+
+<ul>
+<li><p>1982年，SUN(Stanford University Network)公司诞生于美国斯坦福大学校园，并于1986年上市。Java在NASDAQ（纳斯达克：是全美证券商协会自动报价系统）的标识为SUNW，2007年改为SUN。2009年4月20日19点40分，美国数据软件巨头甲骨文公司（Oracle）宣布以74亿美元收购SUN公司。</p></li>
+<li><p>1995年5月，SUNW推出Java。它是Java面向对象程序设计语言和Java平台的总称。</p>
+
+<span id="more"></span><!-- more --></li>
+</ul>
+
+<h3 id="toc_2">Java的三大平台:</h3>
+
+<ul>
+<li>1999年SUN公司发布了基于Java的三个平台技术标准：J2SE,J2EE,J2ME。2005年开始分别改名为：JavaSE，JavaEE，JavaME。</li>
+<li>①　Java SE（Java Platform Standard Edition）：Java标准平台，它允许开发和部署在桌面、服务器、嵌入式环境和实时环境中使用的Java 应用程序，如做一个桌面版的QQ，JavaSE能为Java EE和JavaME提供开发基础。</li>
+<li>②　Java EE（Java Platform Enterprise Edition）：Java企业平台，可帮助开发和部署可移植、健壮、可伸缩且安全的服务器端Java应用程序，如企业的应用系统ERP等。Java EE是在Java SE的基础上构建的，它提供Web服务、组件模型、管理和通信API，可以用来实现企业级的面向服务体系结构（SOA）和Web等应用程序。</li>
+<li>③　Java ME（Java Platform  Micro Edition）：Java微型平台，也叫K-JAVA，用来开发移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机等）。随着Android的迅猛发展，JavaME现在使用的越来越少了，Android会逐渐的取代JavaME的市场份额。
+&gt; - 只有学好JavaSE才能很好的掌握JavaEE和Android的知识。对于Java的就业，很少有人从事单纯的JavaSE开发的，这不是Java的强势之处，我们应该面向市场更广阔的JavaEE和Android就业方向。</li>
+</ul>
+
+<h3 id="toc_3">Java语言特性</h3>
+
+<p>简单、面向对象、安全、跨平台、多线程、健壮、分布式等</p>
+
+<h2 id="toc_4">Java开发环境配置</h2>
+
+<blockquote>
+<p>步骤1:安装JDK<br/>
+步骤2:配置PATH环境变量<br/>
+<mark>注意</mark>Mac系统内置Java开发运行环境，无需做以下操作。</p>
+</blockquote>
+
+<h3 id="toc_5">JDK提供开发环境支持</h3>
+
+<ul>
+<li>Java程序是<code>跨平台</code>的，一次编译到处运行。这主要得益于Java虚拟机（Java Virtual Machine),简称JVM。它是运行所有Java程序的虚拟计算机，好比是街机游戏的模拟器。</li>
+<li>JRE（Java Runtime Environment）中包含JVM，它是java的运行环境。如果要运行Java程序就需要JRE的支持。</li>
+<li>JDK（Java Development Kit),包含Java开发的所有工具，JRE也包含其中，所以要想做Java开发，必须要安装JDK。</li>
+<li><mark>注意</mark> Java程序是跨平台的，依赖于JVM。但是JVM不是跨平台的，所以不同平台要安装不同的JDK版本。JDK不要安装在带中文的路径下,最好也是不包含空格字符的英文路径; 
+<img src="media/15054541063906/15055379652226.jpg" alt="JDK"/>
+<img src="media/15054541063906/15055388689154.jpg" alt="JDK安装"/></li>
+</ul>
+
+<h3 id="toc_6">环境变量的配置</h3>
+
+<ul>
+<li>JDK的目录结构如下
+
+<ul>
+<li>bin:存放了Java的操作工具，比如编译工具javac,启动JVM的java等。</li>
+<li>db:存放了Java测试的数据库derby，企业不用。</li>
+<li>include：存储C++的头文件。</li>
+<li>jre:Java的运行环境，里面有JVM。</li>
+<li>lib:Java运行的核心库。</li>
+<li>src.zip：Java的源代码。</li>
+</ul></li>
+</ul>
+
+<p><img src="media/15054541063906/15055391752894.jpg" alt="JDK目录"/></p>
+
+<ul>
+<li>JDK安装好后，为了在任意位置，都可以使用Java开发的相关命令，就需要配置path环境变量。
+
+<ul>
+<li>右击计算机-&gt;属性-&gt;高级-&gt;环境变量</li>
+<li>在用户变量中查看有无PATH变量（不区分大小写）</li>
+<li>如果有就选中，点击编辑。在原有的变量值最后面加<code>;</code>然后将JDK安装目录的bin目录所在位置加到后面。<br/></li>
+<li>如果没有，点击新建，变量名为<code>PATH</code>，值为bin目录的所在位置。</li>
+<li>点击确定。然后<code>win + R</code>输入<code>cmd</code>回车打开终端。</li>
+<li>输入java -version,显示java版本号即为配置成功。
+<img src="media/15054541063906/15055399365790.jpg" alt=""/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_7">Java编译运行机制</h2>
+
+<ul>
+<li>Java源文件后缀名为<code>.java</code>，例如：Test.java
+<img src="media/15054541063906/15055419710795.jpg" alt=""/></li>
+<li><p>编写好的代码通过<code>javac</code>指令编译，例如<code>javac Test.java</code>生成后缀为<code>.class</code>的字节码文件,例如<code>Test.class</code>。<br/>
+<img src="media/15054541063906/15055420218764.jpg" alt=""/><br/>
+<img src="media/15054541063906/15055418116986.jpg" alt=""/></p></li>
+<li><p>通过使用<code>java</code>指令运行字节码文件，例如<code>java test</code>。会将java程序转化程对应系统能识别的程序然后运行，实现跨平台。<br/>
+<img src="media/15054541063906/15055420615044.jpg" alt=""/><br/>
+<img src="media/15054541063906/15055406209055.jpg" alt=""/></p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[02 - 基本语法]]></title>
+    <link href="hobson.top/15055422144925.html"/>
+    <updated>2017-09-16T14:10:14+08:00</updated>
+    <id>hobson.top/15055422144925.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0"><mark>注意</mark></h2>
+
+<ol>
+<li>Java语言<strong>严格区分大小写</strong>，main和Main是完全不同的概念。</li>
+<li>一个Java源文件里可以定义多个类，但其中最多<strong>只能有一个类被定义成<code>public</code>类</strong>。若源文件中包括了public类，<strong>源文件必须和该public类同名</strong>。</li>
+<li>一个源文件中包含N个Java类时，成功编译后会生成N份字节码文件，即每个类都会生成一份单独的class文件，且字节码文件名和其对应的类名相同。</li>
+<li>若一个类要运行，则必须拥有main方法,因为main方法是程序的入口.</li>
+</ol>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_1">建议</h2>
+
+<ol>
+<li>一个Java源文件<strong>只定义一个类</strong>,不同的类使用不同的源文件定义;</li>
+<li>将每个源文件中单独定义的类都定义成<code>public</code>的，保持<strong>文件名与类名一致</strong>;</li>
+<li>定义一个<strong>主类</strong>，放<strong>main函数</strong>，用来测试运行。<strong>不要把main函数写在普通类里面</strong>。</li>
+<li>平时学习时，在普通类里面定义main方法，是为了方便测试，开发时不会这样用。</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
